@@ -1,0 +1,8 @@
+[template]
+src = "server.conf.tmpl"
+dest = "/etc/nginx/server.conf"
+keys = [
+    "/vhost",
+    "/disqus/domain",
+    "/media/domain"
+]

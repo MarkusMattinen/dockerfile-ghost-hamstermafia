@@ -1,0 +1,138 @@
+/* Social icons
+---------------------------------------- */
+.icon {
+    display: inline-block;
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+
+    &:hover {
+        color: #FFFFFF;
+    }
+}
+
+.icon-feed {    
+    background-color: #ffa366;
+
+    &:hover {
+        background-color: #ff6600;
+    }
+}
+
+.icon-twitter {
+    background-color: #6eb8f0;
+
+    &:hover {
+        background-color: #3ca2f0;
+    }
+}
+
+
+.icon-google-plus {
+    background-color: #d46148;
+
+    &:hover {
+        background-color: #c2492f;
+    }
+}
+
+.icon-facebook {
+    background-color: #5070ba;
+
+    &:hover {
+        background-color: #38569c;
+    }
+}
+
+.icon-dribbble {
+    background-color: #e86d9d;
+
+    &:hover {
+        background-color: #ea4c89;
+    }
+}
+
+.icon-flickr {
+    background-color: #fa50a8;
+
+    &:hover {
+        background-color: #ff0084;
+    }
+}
+
+.icon-foursquare {
+    background-color: #5bc7de;
+
+    &:hover {
+        background-color: #0cbadf;
+    }
+}
+
+.icon-instagram {
+    background-color: #6c9dc4;
+
+    &:hover {
+        background-color: #517fa4;
+    }
+}
+
+.icon-github {
+    background-color: #777777;
+
+    &:hover {
+        background-color: #222222;
+    }
+}
+
+.icon-tumblr {
+    background-color: #5a7b9c;
+
+    &:hover {
+        background-color: #32506d;
+    }
+}
+
+.icon-pinterest {
+    background-color: #cc494f;
+
+    &:hover {
+        background-color: #cb2027;
+    }
+}
+
+.icon-linkedin {
+    background-color: #1a99d6;
+
+    &:hover {
+        background-color: #007bb6;
+    }
+}
+
+.icon-vk {
+    background-color: #6286b3;
+    
+    &:hover {
+        background-color: #45668e;
+    }
+}
+
+.social-links-line {
+    height: 3px;
+    background-color: #ccc;
+}
+
+.social-links {
+    margin-top: -15px;
+    text-align: center;
+
+    .social-links-inner {
+        display: inline-block;
+        padding: 0 15px;
+        background: #FFFFFF;
+    }
+}

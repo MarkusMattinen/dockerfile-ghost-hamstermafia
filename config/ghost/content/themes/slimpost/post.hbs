@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{> header}}
+
+<main id="container" role="main">
+
+	<section class="post-full">
+		{{#post}}
+		<article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="{{post_class}}">
+			<header class="post-header">        		
+    			<h2 itemprop="name headline" class="post-title">
+    				<a href="{{url}}" itemprop="url">{{{title}}}</a>
+    			</h2>
+    			<div class="post-meta">
+        			<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date published_at format="MMMM DD, YYYY"}}</time>
+        			{{#if tags}}
+    				<span class="delimiter">&#8226;</span> 
+		        	{{#tags}}
+		            <span itemprop="keywords">{{name}}</span>{{#unless @last}}, {{/unless}}
+		          	{{/tags}}			        
+			      	{{/if}}
+        		</div>
+        		<hr>
+    		</header>
+    		<section itemprop="articleBody" class="post-content">
+    			{{content}}
+    		</section>
+    		<footer class="post-footer">
+    			<div itemscope itemprop="author" itemtype="http://schema.org/Person" class="post-author">
+    				{{#if author.image}}
+	                	<img itemprop="image" src="{{author.image}}" alt="{{author.name}}" class="post-author-avatar">
+	              	{{/if}}
+					<div class="post-author-info">
+		              	<span itemprop="name">{{author.name}}</span>
+		              	{{#if author.bio}}
+		              	<p itemprop="description" class="post-author-bio">{{author.bio}}</p>
+		              	{{/if}}
+	              	</div>
+    			</div>
+    		</footer>
+		</article>
+		{{/post}}
+		
+		{{> comments}}	
+	</section>
+
+	{{> footer}}
+</main>

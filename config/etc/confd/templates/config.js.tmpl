@@ -1,0 +1,58 @@
+// # Ghost Configuration
+// Setup your Ghost install for various environments
+// Documentation can be found at http://docs.ghost.org/usage/configuration/
+
+var path = require('path'),
+    config;
+
+config = {
+    // ### Development **(default)**
+    development: {
+        // The url to use when providing links to the site, E.g. in RSS and email.
+        url: 'https://{{ .vhost }}',
+        mail: {},
+        database: {
+            client: 'sqlite3',
+            connection: {
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+            },
+            debug: false
+        },
+        server: {
+            // Host to be passed to node's `net.Server#listen()`
+            host: '0.0.0.0',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            port: '5001'
+        },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
+        }
+    },
+
+    // ### Production
+    // When running Ghost in the wild, use the production environment
+    // Configure your URL and mail settings here
+    production: {
+        url: 'http://{{ .vhost }}',
+        mail: {},
+        database: {
+            client: 'pg',
+            connection: {
+                host     : '{{ .postgresql_host }}',
+                user     : '{{ .postgresql_user }}',
+                password : '{{ .postgresql_pass }}',
+                database : '{{ .postgresql_db }}',
+                charset  : 'utf8'
+            }
+        },
+        server: {
+            // Host to be passed to node's `net.Server#listen()`
+            host: '0.0.0.0',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+            port: '5001'
+        }
+    }
+};
+
+// Export config
+module.exports = config;

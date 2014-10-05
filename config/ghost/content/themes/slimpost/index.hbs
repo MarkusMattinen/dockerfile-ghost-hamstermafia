@@ -1,0 +1,18 @@
+{{!< default}}
+
+{{> header}}
+
+<main id="container" role="main">
+
+		{{#foreach posts}}
+        {{#has tag="frontpage"}}
+	<section class="post">
+    		<section itemprop="articleBody" class="post-content">
+    			{{content}}
+    		</section>
+	</section>
+        {{/has}}
+		{{/foreach}}
+
+	{{> footer}}
+</main>

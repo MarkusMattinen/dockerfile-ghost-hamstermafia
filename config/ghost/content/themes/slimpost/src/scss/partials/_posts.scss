@@ -1,0 +1,114 @@
+/* Posts
+---------------------------------------- */
+.post-list,
+.post-full {
+	margin-top: 25px;
+}
+
+.post {
+	margin-bottom: 30px;
+	padding-bottom: 29px;
+	border-bottom: 1px solid #EAEAEA;
+	color: $post-text-color;
+
+	.post-header {		
+		text-align: center;
+
+		.post-title {
+			margin: 0;			
+			font-size: 27px;
+
+			a {
+				color: #333333;
+				text-decoration: none;
+
+				&:hover {
+					color: #777777;
+				}
+			};
+		}
+
+		.post-meta {
+			margin: 5px 0 19px;
+			color: #777777;
+			font-size: 0.72em;
+
+			.delimiter {
+				color: #B8B8B8;
+			}
+		}
+
+		hr {
+			margin: 15px auto;
+			width: 70px;
+			height: 2px;
+			border: none;
+			background-color: #CCCCCC;
+		}
+	}
+
+	.post-excerpt,
+	.post-content {
+		line-height: 1.6;
+	}
+
+	.post-excerpt p {
+		margin: 0;
+	}
+
+	.post-content img {
+		width: 100%;
+		max-width: 450px;
+                margin-right: 5px;
+	}
+
+	.post-content video {
+		width: 100%;
+		max-width: 450px;
+                margin-right: 5px;
+	}
+
+	.post-footer {
+		margin-top: 20px;
+		padding-top: 25px;	
+		border-top: 1px solid #EAEAEA;
+
+		.post-author {
+			overflow: hidden;
+			padding: 15px;
+			border: 1px solid #F1F1F1;
+			background-color: #F7F7F7;
+
+			.post-author-avatar {
+				float: left;
+				margin-left: 0;
+				width: 18%;
+				border: 5px solid #DDDDDD;
+				border-radius: 100%;
+			}
+
+			.post-author-info {
+				float: left;
+				margin: 5px 20px 0;
+				font-size: 14px;
+
+				span {
+					font-weight: bold;
+				}
+
+				p {
+					margin: 5px 0 0;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.page {
+	padding-bottom: 0;
+}
+
+.post-comments {
+	margin-bottom: 50px;
+}
