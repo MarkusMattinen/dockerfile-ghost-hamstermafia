@@ -5,7 +5,14 @@
         	{{> social-links}}
         </div>               
         <div style="font-size:10pt; color: #AAAAAA; padding-top: 30px">
-            Hamsterien värit ovat suuntaa-antavia eivätkä välttämättä vastaa standardoituja värejä. En kuulu virallisiin kasvattajiin, kasvatan syyrianhamstereita harrastusmielessä kotonani rakastaviin lemmikkikoteihin.
+            <p>Hamsterien värit ovat suuntaa-antavia eivätkä välttämättä vastaa standardoituja värejä. En kuulu virallisiin kasvattajiin, kasvatan syyrianhamstereita harrastusmielessä kotonani rakastaviin lemmikkikoteihin.</p>
+            <p id="visitorsCount"></p>
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() { if (xmlhttp.readyState === 4 && xmlhttp.status === 200) { document.getElementById("visitorsCount").innerHTML = "K&auml;vij&ouml;it&auml;: " + JSON.parse(xmlhttp.responseText).totalsForAllResults["ga:sessions"] } };
+xmlhttp.open("GET", "https://hamstermafia-com.appspot.com/query?id=ahJzfmhhbXN0ZXJtYWZpYS1jb21yFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA", true);
+xmlhttp.send();
+</script>
         </div>
     </section>
 </footer>
