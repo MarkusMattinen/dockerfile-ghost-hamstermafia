@@ -62,10 +62,46 @@
                 margin-right: 5px;
 	}
 
+	.post-content img[alt=small] {
+		width: 100%;
+		max-width: 225px;
+                margin-right: 5px;
+	}
+
+	.post-content img[alt=medium] {
+		width: 100%;
+		max-width: 300px;
+                margin-right: 5px;
+	}
+
+	.post-content img[alt=large] {
+		width: 100%;
+		max-width: 100%;
+                margin-right: 0px;
+	}
+
 	.post-content video {
 		width: 100%;
 		max-width: 450px;
                 margin-right: 5px;
+	}
+
+	.post-content video[alt=small] {
+		width: 100%;
+		max-width: 225px;
+                margin-right: 5px;
+	}
+
+	.post-content video[alt=medium] {
+		width: 100%;
+		max-width: 300px;
+                margin-right: 5px;
+	}
+
+	.post-content video[alt=large] {
+		width: 100%;
+		max-width: 100%;
+                margin-right: 0px;
 	}
 
 	.post-footer {
