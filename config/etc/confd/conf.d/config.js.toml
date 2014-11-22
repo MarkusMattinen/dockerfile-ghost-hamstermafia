@@ -3,6 +3,10 @@ src = "config.js.tmpl"
 dest = "/ghost/config.js"
 keys = [
     "/vhost",
+    "/aws/accesskeyid",
+    "/aws/secretaccesskey",
+    "/aws/region",
+    "/aws/bucket",
     "/postgresql/host",
     "/postgresql/user",
     "/postgresql/pass",

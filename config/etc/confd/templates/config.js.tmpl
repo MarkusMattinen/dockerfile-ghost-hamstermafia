@@ -24,6 +24,12 @@ config = {
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '5001'
         },
+        aws: {
+            accessKeyId: '{{ .aws_accesskeyid }}',
+            secretAccessKey: '{{ .aws_secretaccesskey }}',
+            bucket: '{{ .aws_bucket }}',
+            region: '{{ .aws_region }}'
+        },
         paths: {
             contentPath: path.join(__dirname, '/content/')
         }
@@ -44,6 +50,12 @@ config = {
                 database : '{{ .postgresql_db }}',
                 charset  : 'utf8'
             }
+        },
+        aws: {
+            accessKeyId: '{{ .aws_accesskeyid }}',
+            secretAccessKey: '{{ .aws_secretaccesskey }}',
+            bucket: '{{ .aws_bucket }}',
+            region: '{{ .aws_region }}'
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
