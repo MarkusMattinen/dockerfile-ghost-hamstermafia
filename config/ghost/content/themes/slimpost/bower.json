@@ -9,13 +9,13 @@
   },
   "install": {
     "path": {
-      "css": "src/scss/vendor/bower",
-      "js": "src/js/vendor/bower",
-      "eot": "assets/fonts",
-      "svg": "assets/fonts",
-      "ttf": "assets/fonts",
-      "woff": "assets/fonts",
-      "otf": "assets/fonts"
+      "css": "src/scss/vendor/bower/{name}/..",
+      "js": "src/js/vendor/bower/{name}/..",
+      "eot": "assets/fonts/{name}/..",
+      "svg": "assets/fonts/{name}/..",
+      "ttf": "assets/fonts/{name}/..",
+      "woff": "assets/fonts/{name}/..",
+      "otf": "assets/fonts/{name}/.."
     },
     "sources": {
       "fitvids": "src/bower_components/fitvids/jquery.fitvids.js",
