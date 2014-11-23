@@ -23,7 +23,7 @@ RUN cd /ghost/content/themes/slimpost \
  && apt-get update \
  && apt-get install -y --no-install-recommends build-essential git \
  && npm install \
- && npm install -g bower-installer \
+ && npm install -g markusmattinen/bower-installer \
  && bower-installer \
  && grunt \
  && npm uninstall -g bower-installer \
