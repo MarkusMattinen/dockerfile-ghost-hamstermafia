@@ -6,7 +6,8 @@ do
     if [ -f "$path/$file" -a ! -f "$fullresname" ]
     then
         echo "Resizing $path/$file, original file will be at $fullresname"
-        mv "$path/$file" "$fullresname"
-        convert "$fullresname" -strip -filter Lanczos -sampling-factor 1x1 -resize 450x -unsharp 1.5x1+0.7+0.02 "$path/$file" || cp "$fullresname" "$path/$file"
+        cp "$path/$file" "$fullresname"
+        convert "$fullresname" -strip -filter Lanczos -sampling-factor 1x1 -resize 450x -unsharp 1.5x1+0.7+0.02 "$path/${file}.bak" || cp "$fullresname" "$path/${file}.bak"
+        mv "$path/${file}.bak" "$path/$file"
     fi
 done
