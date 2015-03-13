@@ -1,5 +1,5 @@
 # hamstermafia theme, ghost, node.js, nginx, etcd registration and supervisord on trusty
-FROM markusma/nginx-etcd:trusty
+FROM markusma/nginx-etcdregister:1.5.13
 
 RUN add-apt-repository -y ppa:chris-lea/node.js \
  && apt-get update \
