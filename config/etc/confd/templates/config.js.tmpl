@@ -9,7 +9,7 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'https://{{ .vhost }}',
+        url: 'https://{{ getenv "VHOST" }}',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -33,15 +33,15 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://{{ .vhost }}',
+        url: 'http://{{ getenv "VHOST" }}',
         mail: {},
         database: {
             client: 'pg',
             connection: {
-                host     : '{{ .postgresql_host }}',
-                user     : '{{ .postgresql_user }}',
-                password : '{{ .postgresql_pass }}',
-                database : '{{ .postgresql_db }}',
+                host     : '{{ getenv "POSTGRESQL_HOST" }}',
+                user     : '{{ getenv "POSTGRESQL_USER" }}',
+                password : '{{ getenv "POSTGRESQL_PASS" }}',
+                database : '{{ getenv "POSTGRESQL_DB" }}',
                 charset  : 'utf8'
             }
         },
