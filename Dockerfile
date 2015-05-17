@@ -9,6 +9,7 @@ RUN add-apt-repository -y ppa:chris-lea/node.js \
  && npm install -g grunt-cli bower 2>&1 \
  && npm install 2>&1 >/dev/null \
  && npm install pg 2>&1 >/dev/null \
+ && npm install cookie-session 2>&1 >/dev/null \
  && bower --allow-root install \
  && grunt init \
  && grunt prod \
